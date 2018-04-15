@@ -28,5 +28,12 @@ public class Vehicle {
 		else
 			return this.velocitat_actual;
 	}
+	
+	public double desaccelerar (double velocitat_actual){
+		if(this.velocitat_actual>0)
+			return this.velocitat_actual-=10;
+		else
+			return this.velocitat_actual;
+	}
 
 }
