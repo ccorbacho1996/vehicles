@@ -11,6 +11,7 @@ public class Vehicle {
 	public Vehicle(double velocitat_actual) {
 		super();
 		this.velocitat_actual = velocitat_actual;
+		this.velocitat_actual = 0;
 	}
 	
 	public double getVelocitat() {
