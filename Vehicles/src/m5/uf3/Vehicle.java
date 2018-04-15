@@ -7,11 +7,17 @@ public class Vehicle {
 	private int cilindrada;
 	private int portes;
 	private double velocitat_actual;
+	private int marxes;
+	private int marxa_actual;
 	
-	public Vehicle(double velocitat_actual) {
+	public Vehicle(double velocitat_actual, int marxes, int marxa_actual) {
 		super();
 		this.velocitat_actual = velocitat_actual;
 		this.velocitat_actual = 0;
+		this.marxes = marxes;
+		this.marxes = 5;
+		this.marxa_actual = marxa_actual;
+		this.marxa_actual = 0;
 	}
 	
 	public double getVelocitat() {
@@ -34,6 +40,20 @@ public class Vehicle {
 			return this.velocitat_actual-=10;
 		else
 			return this.velocitat_actual;
+	}
+	
+	public int pujaMarxa(){
+		if(this.marxa_actual>this.marxes)
+			return this.marxa_actual+=1;
+		else
+			return this.marxa_actual;
+	}
+	
+	public int baixaMarxa(){
+		if(this.marxa_actual>0)
+			return this.marxa_actual-=1;
+		else
+			return this.marxa_actual;
 	}
 
 }
